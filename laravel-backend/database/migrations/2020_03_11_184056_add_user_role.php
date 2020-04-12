@@ -11,7 +11,7 @@ class AddUserRole extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->unsignedSmallInteger('role');
+            $table->unsignedSmallInteger('role')->nullable();
         });
 
         DB::table('users')->update([

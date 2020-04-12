@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -15,6 +16,8 @@ class DatabaseSeeder extends Seeder
         factory(\App\Models\User::class,1)->create()->each(function($user){
             $user->tasks()->saveMany(factory(App\Models\Taskmanager\Task::class, 10)->make());
         });
+        $this->call(WorksTableSeeder::class);
+        $this->call(StatusesTableSeeder::class);
         
     }
 }

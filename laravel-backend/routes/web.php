@@ -11,15 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'KabinetController@index')->name('kabinet');
 
+Route::resource('orders', 'Vakademe\OrderController');
 
+// Route::get('/orders', 'Vakademe\OrdersController@index');
 // Route::group(['namespace' => 'Api'], function () {
 //     Route::apiResource('tasks', 'Taskmanager\TaskController');
 //     Route::group(['namespace' => 'Auth'], function () {

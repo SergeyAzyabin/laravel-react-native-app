@@ -20,6 +20,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['namespace' => 'Api'], function () {
     Route::apiResource('tasks', 'Taskmanager\TaskController');
+    Route::apiResource('orders', 'Vakademe\OrderController');
+    Route::apiResource('works', 'Vakademe\WorkController');
     Route::group(['namespace' => 'Auth'], function () {
         Route::post('register', 'RegisterController@register');
         Route::post('login', 'LoginController@login');
