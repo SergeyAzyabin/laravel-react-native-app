@@ -36,9 +36,9 @@ const OrdersList = ({ navigation } = this.props) => {
 
               orders.map(item => {
                 return (
-                  <TouchableOpacity onPress={() => navigation.push('Order', { id: item.id })}>
+                  <TouchableOpacity key={item.id} onPress={() => navigation.push('Order', { id: item.id })}>
                     <Line>
-                      <View key={item.id}>
+                      <View >
                         <Text>№{item.id}</Text>
                         <Text>{item.work_name}</Text>
 

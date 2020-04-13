@@ -4,10 +4,10 @@ import qs from 'query-string';
 
 
 export default class Api {
-    static registerUrl = 'http://192.168.31.142/api/register';
-    static loginUrl = 'http://192.168.31.142/api/login';
-    static ordersUrl = 'http://192.168.31.142/api/orders';
-    static categoriesUrl = 'http://192.168.31.142/api/works';
+    static registerUrl = 'http://95.215.208.117:3000/api/register';
+    static loginUrl = 'http://95.215.208.117:3000/api/login';
+    static ordersUrl = 'http://95.215.208.117:3000/api/orders';
+    static categoriesUrl = 'http://95.215.208.117:3000/api/works';
     static setToken = (token) => {
         SecureStore.setItemAsync('token', token);
     }
